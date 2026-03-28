@@ -27,25 +27,25 @@
     </div>
 
     
-<script src="sw.js"></script>
 
-    <script>
-        function ativarbt() {
-            let infoBox = document.querySelector('.infos');
-            if (infoBox) {
-                infoBox.classList.toggle('ativo');
-                console.log("Botão clicado e classe alternada!");
-            } else {
-                console.error("Erro: A div com classe '.infos' não foi encontrada.");
-            }
+
+<script>
+    function ativarbt() {
+        let infoBox = document.querySelector('.infos');
+        if (infoBox) {
+            infoBox.classList.toggle('ativo');
+            console.log("Botão clicado!");
         }
+    }
 
-      
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js')
-                .then(() => console.log("PWA Ativo!"))
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+           
+            navigator.serviceWorker.register('/rede-card/sw.js') 
+                .then(reg => console.log("PWA Ativo!", reg.scope))
                 .catch(err => console.log("Erro no PWA:", err));
-        }
-    </script>
+        });
+    }
+</script>
 </body>
 </html>

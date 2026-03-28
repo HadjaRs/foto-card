@@ -1,11 +1,11 @@
-const cacheName = 'agata-v3'; 
+const cacheName = 'agata-v4'; 
 const assets = [
-  './',
-  './index.html',
-  './style.css',
-  './manifest.json',
-  './img/icone.png',
-  './img/agata.jpg'
+  '/rede-card/',
+  '/rede-card/index.html',
+  '/rede-card/style.css',
+  '/rede-card/manifest.json',
+  '/rede-card/img/icone.png',
+  '/rede-card/img/agata.jpg'
 ];
 
 self.addEventListener('install', e => {
