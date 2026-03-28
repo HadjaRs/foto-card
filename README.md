@@ -3,7 +3,7 @@
 Bem-vinda ao meu cantinho! Este é o meu cartão de visitas digital, feito com muito carinho para centralizar redes sociais em um só lugar. 🎀
 
 ### 🔗 Acesse aqui:
-> **[Hadjars - Rede Card](https://hadjars.github.io/rede-card/)**
+> **[Hadjars - Rede Card](https://hadjars.github.io/foto-card/)**
 
 ---
 
