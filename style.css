@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family:cursive;
+    background: #6b003b;
+    background: radial-gradient(circle, rgba(107, 0, 59, 1) 0%, #ff6b89 100%);
+    animation: gradient 6s ease-in-out infinite;
+    background-size: 400% 400%;
+    
+}
+
+.container{
+    
+    width: 100%;
+    max-width: 400px;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.caixa-border{
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.caixa-img{
+    background-color: aqua;
+    width: 90%;
+    height: 53vh;
+    background-image: url(img/agata.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+    
+    
+}
+
+
+
+.botao{
+    padding: 10px 60px;
+    width: 90%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: #f7aebd;
+    box-shadow: 0px 3px 10px black;
+}
+
+.botao:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px black;
+    background-color: #ff6b89;
+    color: white;
+}
+
+.container:has(.infos.ativo) .caixa-border {
+    transform: translateY(-23px);
+}
+
+.infos{
+    background-color: #ff6b897c;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 40px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+}
+
+.infos.ativo{
+    opacity: 1;
+    visibility: visible;
+}
+
+.icones a{
+    color: rgb(78, 8, 78);
+    margin: 10px;
+}
+
+.container .caixa-border::before{
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    bottom: -14px;
+    transform: translateX(0px) rotate(45deg);
+}
+
+@keyframes gradient{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+@media (max-width: 350px) {
+    .caixa-border { height: 45vh; }
+    .infos { font-size: 20px; }
+    .botao{
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 350px; 
+    }
+}

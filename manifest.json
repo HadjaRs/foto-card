@@ -1,0 +1,20 @@
+{
+  "name": "Card Ágata Samya",
+  "short_name": "ÁgataCard",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#6b003b",
+  "theme_color": "#ff6b89",
+  "icons": [
+    {
+    "src": "img/icone.png",
+    "sizes": "500x500",
+    "type": "image/png"
+    },
+    {
+    "src": "img/icone.png",
+    "sizes": "500x500",
+    "type": "image/png"
+    }
+  ]
+}
